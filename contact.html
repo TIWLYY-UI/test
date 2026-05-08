@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ติดต่อเรา - NovaSphere</title>
+    <title>ติดต่อเรา - FinMaster Academy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -12,24 +12,31 @@
   </head>
   <body>
     <div class="blob-bg"></div>
-    <header class="site-header"><div class="container nav"><a class="brand" href="index.html"><span class="brand-logo"><i class="fa-solid fa-bolt"></i></span>NovaSphere</a><ul class="nav-links"><li><a href="index.html">หน้าแรก</a></li><li><a href="about.html">เกี่ยวกับ</a></li><li><a href="services.html">บริการ</a></li><li><a class="active" href="contact.html">ติดต่อ</a></li><li><a id="navLogin" href="login.html">เข้าสู่ระบบ</a></li><li><a id="navRegister" href="register.html">สมัครสมาชิก</a></li><li><a id="navDashboard" href="dashboard.html" style="display: none">แดชบอร์ด</a></li><li><a id="navLogout" href="#" style="display: none">ออกจากระบบ</a></li></ul><div class="actions"><button id="themeBtn" class="icon-btn" type="button"><i class="fa-solid fa-moon"></i></button><button id="audioBtn" class="icon-btn" type="button"><i class="fa-solid fa-volume-high"></i></button><button id="menuBtn" class="icon-btn menu-btn" type="button"><i class="fa-solid fa-bars"></i></button></div></div></header>
+    <header class="site-header"><div class="container nav"><a class="brand" href="index.html"><span class="brand-logo"><i class="fa-solid fa-chart-pie"></i></span>FinMaster Academy</a><ul class="nav-links"><li><a href="index.html">หน้าแรก</a></li><li><a href="about.html">เกี่ยวกับ</a></li><li><a href="services.html">คอร์ส</a></li><li><a class="active" href="contact.html">ติดต่อ</a></li><li><a id="navLogin" href="login.html">เข้าสู่ระบบ</a></li><li><a id="navRegister" href="register.html">สมัครสมาชิก</a></li><li><a id="navDashboard" href="dashboard.html" style="display: none">แดชบอร์ด</a></li><li><a id="navLogout" href="#" style="display: none">ออกจากระบบ</a></li></ul><div class="actions"><button id="themeBtn" class="icon-btn" type="button"><i class="fa-solid fa-moon"></i></button><button id="audioBtn" class="icon-btn" type="button"><i class="fa-solid fa-volume-high"></i></button><button id="menuBtn" class="icon-btn menu-btn" type="button"><i class="fa-solid fa-bars"></i></button></div></div></header>
     <main class="container">
-      <section class="section"><h1>ติดต่อทีมงาน</h1><p class="muted">ส่งข้อความหาเราได้ทันทีผ่านฟอร์มด้านล่าง</p></section>
+      <section class="section"><h1>ติดต่อทีมที่ปรึกษา</h1><p class="muted">สอบถามรายละเอียดคอร์ส, แผนการเรียน หรือขอคำแนะนำการเงินเบื้องต้น</p></section>
       <section class="section grid-2">
-        <article class="card"><h3><i class="fa-solid fa-location-dot"></i> สำนักงาน</h3><p class="muted">Bangkok Digital District</p><h3 style="margin-top: 1rem"><i class="fa-solid fa-envelope"></i> อีเมล</h3><p class="muted">hello@novasphere.dev</p></article>
+        <article class="card"><h3><i class="fa-solid fa-location-dot"></i> สำนักงาน</h3><p class="muted">Bangkok Financial District</p><h3 style="margin-top: 1rem"><i class="fa-solid fa-envelope"></i> อีเมล</h3><p class="muted"><a href="mailto:support@finmaster.academy">support@finmaster.academy</a></p><h3 style="margin-top: 1rem"><i class="fa-solid fa-phone"></i> โทร</h3><p class="muted"><a href="tel:+6623456789">+66 2 345 6789</a></p></article>
         <article class="card">
           <form id="contactForm">
             <div><label for="name">ชื่อ</label><input id="name" type="text" /></div>
             <div><label for="email">อีเมล</label><input id="email" type="email" /></div>
             <div><label for="subject">หัวข้อ</label><input id="subject" type="text" /></div>
             <div><label for="message">ข้อความ</label><textarea id="message"></textarea></div>
-            <button class="btn primary" type="submit">ส่งข้อความ</button>
+            <button class="btn primary" type="submit">ส่งคำถาม</button>
             <p id="contactFeedback" class="feedback"></p>
           </form>
         </article>
       </section>
+      <section class="section grid-3">
+        <article class="card"><h3><i class="fa-solid fa-clock"></i> เวลาทำการ</h3><p class="muted">จันทร์ - เสาร์ 09:00 - 20:00</p></article>
+        <article class="card"><h3><i class="fa-solid fa-headset"></i> Student Support</h3><p class="muted">ทีมดูแลผู้เรียนและการบ้านคอร์สทุกวัน</p></article>
+        <article class="card"><h3><i class="fa-solid fa-paper-plane"></i> SLA</h3><p class="muted">ตอบคำถามภายใน 1 ชั่วโมงทำการ</p></article>
+      </section>
     </main>
-    <footer class="footer"><div class="container"><p>NovaSphere Platform</p></div></footer>
+    <footer class="footer"><div class="container"><p>FinMaster Academy</p></div></footer>
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <script src="js/three-background.js"></script>
     <script src="js/script.js"></script>
     <script src="js/effects.js"></script>
   </body>

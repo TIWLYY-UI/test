@@ -118,7 +118,7 @@ function setupContactForm() {
       setFeedback($("#contactFeedback"), "กรุณากรอกข้อมูลให้ครบทุกช่อง", "error");
       return;
     }
-    setFeedback($("#contactFeedback"), "ส่งข้อความสำเร็จ ทีมงานจะติดต่อกลับเร็วที่สุด", "ok");
+    setFeedback($("#contactFeedback"), "ส่งคำถามสำเร็จ ทีมที่ปรึกษาจะติดต่อกลับเร็วที่สุด", "ok");
     form.reset();
   });
 }
@@ -189,12 +189,35 @@ function setupDashboard() {
   if (userEmail) userEmail.textContent = auth.email;
 }
 
+function setupPageTransitions() {
+  const overlay = document.createElement("div");
+  overlay.id = "pageTransition";
+  document.body.appendChild(overlay);
+
+  requestAnimationFrame(() => overlay.classList.add("ready"));
+
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest("a[href]");
+    if (!link) return;
+    const href = link.getAttribute("href");
+    if (!href || href.startsWith("#") || link.target === "_blank") return;
+    const isExternal = /^https?:\/\//i.test(href) && !href.includes(location.host);
+    if (isExternal) return;
+    e.preventDefault();
+    overlay.classList.remove("ready");
+    setTimeout(() => {
+      window.location.href = href;
+    }, 220);
+  });
+}
+
 document.addEventListener("click", (e) => {
   const target = e.target.closest("a,button,.card");
   if (target) clickAudio();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  setupPageTransitions();
   applyTheme();
   syncAudioIcon();
   navAuthState();

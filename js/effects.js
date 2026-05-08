@@ -6,8 +6,8 @@ function createSplashIntro() {
   splash.className = "fx-splash";
   splash.innerHTML = `
     <div class="fx-splash-center">
-      <h1>NOVASPHERE 3D EXPERIENCE</h1>
-      <p>Loading animated universe...</p>
+      <h1>FINMASTER 3D EXPERIENCE</h1>
+      <p>Loading dollar storm background...</p>
     </div>
     <div class="coin-track"></div>
     <div class="coin"></div>
@@ -16,68 +16,8 @@ function createSplashIntro() {
   `;
   document.body.appendChild(splash);
 
-  setTimeout(() => splash.classList.add("hide"), 3800);
-  setTimeout(() => splash.remove(), 5200);
-}
-
-function createFxCanvas() {
-  if (document.getElementById("fxCanvas")) return;
-  const canvas = document.createElement("canvas");
-  canvas.id = "fxCanvas";
-  document.body.appendChild(canvas);
-  const ctx = canvas.getContext("2d");
-  const particles = [];
-  const mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-
-  function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  resize();
-  window.addEventListener("resize", resize);
-
-  window.addEventListener("pointermove", (e) => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-  });
-
-  for (let i = 0; i < 55; i += 1) {
-    particles.push({
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
-      vx: (Math.random() - 0.5) * 0.7,
-      vy: (Math.random() - 0.5) * 0.7,
-      r: Math.random() * 2.4 + 0.8,
-    });
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (const p of particles) {
-      const dx = mouse.x - p.x;
-      const dy = mouse.y - p.y;
-      const dist = Math.max(Math.hypot(dx, dy), 1);
-      if (dist < 160) {
-        p.vx += (dx / dist) * 0.012;
-        p.vy += (dy / dist) * 0.012;
-      }
-      p.x += p.vx;
-      p.y += p.vy;
-      p.vx *= 0.99;
-      p.vy *= 0.99;
-
-      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-
-      ctx.beginPath();
-      ctx.fillStyle = "rgba(130, 150, 255, 0.55)";
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fill();
-    }
-    requestAnimationFrame(animate);
-  }
-
-  animate();
+  setTimeout(() => splash.classList.add("hide"), 3200);
+  setTimeout(() => splash.remove(), 4600);
 }
 
 function enableTiltCards() {
@@ -112,7 +52,9 @@ function upgradeButtons() {
 
 document.addEventListener("DOMContentLoaded", () => {
   createSplashIntro();
-  createFxCanvas();
+  if (typeof initThreeBackground === "function") {
+    initThreeBackground();
+  }
   enableTiltCards();
   upgradeButtons();
 });

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>เข้าสู่ระบบ - NovaSphere</title>
+    <title>เข้าสู่ระบบ - FinMaster Academy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -12,11 +12,11 @@
   </head>
   <body>
     <div class="blob-bg"></div>
-    <header class="site-header"><div class="container nav"><a class="brand" href="index.html"><span class="brand-logo"><i class="fa-solid fa-bolt"></i></span>NovaSphere</a><ul class="nav-links"><li><a href="index.html">หน้าแรก</a></li><li><a href="about.html">เกี่ยวกับ</a></li><li><a href="services.html">บริการ</a></li><li><a href="contact.html">ติดต่อ</a></li><li><a id="navLogin" class="active" href="login.html">เข้าสู่ระบบ</a></li><li><a id="navRegister" href="register.html">สมัครสมาชิก</a></li><li><a id="navDashboard" href="dashboard.html" style="display: none">แดชบอร์ด</a></li><li><a id="navLogout" href="#" style="display: none">ออกจากระบบ</a></li></ul><div class="actions"><button id="themeBtn" class="icon-btn" type="button"><i class="fa-solid fa-moon"></i></button><button id="audioBtn" class="icon-btn" type="button"><i class="fa-solid fa-volume-high"></i></button><button id="menuBtn" class="icon-btn menu-btn" type="button"><i class="fa-solid fa-bars"></i></button></div></div></header>
+    <header class="site-header"><div class="container nav"><a class="brand" href="index.html"><span class="brand-logo"><i class="fa-solid fa-chart-pie"></i></span>FinMaster Academy</a><ul class="nav-links"><li><a href="index.html">หน้าแรก</a></li><li><a href="about.html">เกี่ยวกับ</a></li><li><a href="services.html">คอร์ส</a></li><li><a href="contact.html">ติดต่อ</a></li><li><a id="navLogin" class="active" href="login.html">เข้าสู่ระบบ</a></li><li><a id="navRegister" href="register.html">สมัครสมาชิก</a></li><li><a id="navDashboard" href="dashboard.html" style="display: none">แดชบอร์ด</a></li><li><a id="navLogout" href="#" style="display: none">ออกจากระบบ</a></li></ul><div class="actions"><button id="themeBtn" class="icon-btn" type="button"><i class="fa-solid fa-moon"></i></button><button id="audioBtn" class="icon-btn" type="button"><i class="fa-solid fa-volume-high"></i></button><button id="menuBtn" class="icon-btn menu-btn" type="button"><i class="fa-solid fa-bars"></i></button></div></div></header>
     <main class="container auth-wrap">
       <section class="card auth-card">
         <h1>เข้าสู่ระบบ</h1>
-        <p class="muted">ใช้บัญชีของคุณเพื่อเข้าถึงแดชบอร์ด</p>
+        <p class="muted">เข้าสู่ระบบเพื่อเรียนคอร์สและติดตามความคืบหน้า</p>
         <form id="loginForm" style="margin-top: 1rem">
           <div><label for="loginEmail">อีเมล</label><input id="loginEmail" type="email" /></div>
           <div><label for="loginPassword">รหัสผ่าน</label><input id="loginPassword" type="password" /></div>
@@ -26,6 +26,8 @@
         <p class="muted" style="margin-top: 1rem">ยังไม่มีบัญชี? <a href="register.html">สมัครสมาชิก</a></p>
       </section>
     </main>
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <script src="js/three-background.js"></script>
     <script src="js/script.js"></script>
     <script src="js/effects.js"></script>
   </body>
